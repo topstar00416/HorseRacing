@@ -3,3 +3,4 @@ __pycache__
 
 output.csv
 racing.py
+checkpoints/horse_epoch_*.pth
