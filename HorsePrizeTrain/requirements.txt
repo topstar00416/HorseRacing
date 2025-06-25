@@ -1,0 +1,6 @@
+requests
+pandas
+torch
+scikit-learn
+torchsummary
+tqdm
