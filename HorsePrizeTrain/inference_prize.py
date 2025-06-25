@@ -67,12 +67,10 @@ inputs = torch.tensor([X_new], dtype=torch.float32)
 
 
 save_dir = "checkpoints"
-model_files = glob.glob(os.path.join(save_dir, "horse_*.pth"))
-if not model_files:
-    raise FileNotFoundError("No checkpoints found in the directory!")
-
-latest_model = max(model_files, key=os.path.getmtime)
+latest_model = os.path.join(save_dir, "horse_prize_model.pth")
 print("Latest model:", latest_model)
+if os.path.exists(latest_model) == False:
+    print("Error: checkpoint file does not exist")
 
 
 # Load the Model & Weights
